@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState,createContext } from "react";
+import Flickr from "./Flickr";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App(){
+  const [Keyword,setKeyword]=useState("")
+  
+  const UserContext=createContext()
+
+  const handleClick=()=>{
+       return true
+  }
+
+  return(
+    <div>
+      <UserContext.Provider value={Keyword}>
+      <h1>Snap Shot</h1>
+     <form onSubmit={handleClick}>
+     <label htmlFor="search"></label>
+     <input id="search" type="search" value={Keyword} onChange={(e)=>{setKeyword(e.target.value)}} 
+     placeholder="Search"></input>
+     <button >Enter</button>
+     </form>
+     <Flickr/>
+     
+      </UserContext.Provider>
     </div>
-  );
+  )
 }
-
 export default App;
