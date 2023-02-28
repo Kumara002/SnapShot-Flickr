@@ -1,30 +1,49 @@
 import React from "react";
-import { useState,createContext } from "react";
+import { useState } from "react";
 import Flickr from "./Flickr";
+import  {UserContext} from "./CreateContext";
+import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
+import searchpic from "./searchbar.png";
+
 
 function App(){
   const [Keyword,setKeyword]=useState("")
-  
-  const UserContext=createContext()
 
-  const handleClick=()=>{
-       return true
+  function handleMountain(){
+    setKeyword("Mountain")
+  }
+  function handleBeach(){
+    setKeyword("Beach")
+  }
+  function handleSun(){
+    setKeyword("Sun")
+  }
+  function handleBirds(){
+    setKeyword("Birds")
   }
 
   return(
-    <div>
       <UserContext.Provider value={Keyword}>
+      <BrowserRouter>
       <h1>Snap Shot</h1>
-     <form onSubmit={handleClick}>
+     <form>
      <label htmlFor="search"></label>
-     <input id="search" type="search" value={Keyword} onChange={(e)=>{setKeyword(e.target.value)}} 
+     <img src={searchpic} alt="searchbar" width="15" height="15" style={{"margin-left":"10px","marginRight":"10px"}}></img>
+     <input id="search" type="search" value={Keyword} onChange={(e)=>{setKeyword(e.target.value)}}
      placeholder="Search"></input>
-     <button >Enter</button>
+     <Link to="/flickr"><button onClick={handleMountain}>Mountain</button></Link>
+     <Link to="/flickr"><button onClick={handleBeach}>Beach</button></Link>
+     <Link to="/flickr"><button onClick={handleBirds}>Birds</button></Link>
+     <Link to="/flickr"><button onClick={handleSun}>Sun</button></Link>
      </form>
-     <Flickr/>
+     
+        <Routes>
+          <Route path="/flickr" element={<Flickr/>}></Route>
+        </Routes>
+        </BrowserRouter>
      
       </UserContext.Provider>
-    </div>
+
   )
 }
 export default App;

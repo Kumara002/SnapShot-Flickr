@@ -1,0 +1,166 @@
+Flickr.js junk{
+// import axios from "axios";
+// const [count,setCount]=useState(0)
+
+    // console.log(user)
+
+    
+    // const axiosUrl=()=>{
+    //     axios.get(url)
+    //     // .then((response) => {return response.json()})
+    //     .then((data) => {
+    //         // We will impliment something later...
+    //         console.log(data)
+    //     });
+    // }
+
+    // let FlickrArr=[]
+
+    // const arr=[]
+
+
+    // let dep=[1,2,3,4]
+
+    
+// return (`"${url}"`)
+   console.log(data)
+                    console.log(data.photos)
+                    // const a=()=>{
+                    //     return(
+                    //         <div>imhere</div>
+                    //     )
+                    // }
+                    // return a()
+                    //  setImageUrl([...imageUrl, getFlickrImageURL(photo, 'q')]);
+                        // return setImageUrl(getFlickrImageURL(photo, 'q'))
+                        // return arr.push(imageUrl)
+                        // const a=getFlickrImageURL(photo, 'q');
+                        // console.log(index)
+                        //  newArr.push(getFlickrImageURL(photo, 'q'));
+                        //  console.log(newArr)
+                        //  return newArr
+                        // arr.push(getFlickrImageURL(photo, 'q'))
+                        // // return arr
+                        // arr[`${index}`]=getFlickrImageURL(photo, 'q');
+                        // return arr
+                        // arr[`{${index}}`]=getFlickrImageURL(photo, 'q');
+                        // return (
+                        //     <div>
+                        //         <h1>hello kumara</h1>
+                        //         <img src={a} alt="a"/>
+                        //     </div>
+                        // )
+
+                         // // console.log(FlickrArr)
+    // console.log(arr)
+    
+    // console.log(arr.0)
+    // // console.log("hello kumara")
+
+    // return(
+    //     <div>
+    //         <img src={"text"} alt="flickrArr"/>
+    //     </div>
+    // )
+//  return (
+//     <div>
+//         { arr.map((value,index)=>{
+//         console.log(value)
+//         return (
+//             <img src={value} alt={index}/> 
+//         )
+//     })}
+//     </div>
+//  )
+// if(arr){
+//     arr.map((value,index)=>{
+//         console.log(value)
+//         FlickrArr.push(index)
+//         return (
+//             <div>{value}</div>
+//         )
+//     })
+// }
+// console.log(arr.length)
+// async function mappie{
+//      arr.map((value,index)=>{
+//         console.log(value)
+//         FlickrArr.push(index)
+//         return true
+//     })
+// }
+
+    // arr.map(async(value,index)=>{
+    //     console.log(value)
+    //     await FlickrArr.push(index)
+    //     return 
+    // })
+
+    // arr.forEach(async (values)=>{
+    //     await console.log(values)
+    // })
+
+    // let duplicatmap=[{"hell":"heaven there is more than that"},{"0":"hello buddy"}]
+    // duplicatmap.map(value=>{
+    //     console.log(value)
+    // })
+    // for(let i=0;i<5;i++){
+    //     arr[i]=imageUrl
+    // }
+    // console.log(arr.push(imageUrl))
+    // console.log(arr)
+    // console.log(arr.length)
+    // console.log(arr[5])
+    // // console.log(FlickrArr)
+    // // console.log(duplicatmap)
+    // arr.map((arr)=>{
+    //     console.log(arr)
+    //     return arr
+    // })
+
+    // return (
+    //    <div>Hello</div>
+    //    {}
+    //    )
+    // fetch(url)
+    //         .then((res) => {
+    //             return res.json()
+    //         })
+    //         .then((data) => {
+    //             // get an array of image-url
+    //             console.log(data)
+    //             console.log(data.photos)
+                
+    //                 return(
+    //                     <div>imhere</div>
+    //                 )
+    //             })
+                // return a()
+                
+                // arr.push(`{${data.photos.photo.map((photo,index) => {
+                //     // const a=getFlickrImageURL(photo, 'q');
+                //     // console.log(index)
+                //     return getFlickrImageURL(photo, 'q');
+                //     // arr.push(a)
+                //     // // return arr
+                //     // arr[`${index}`]=getFlickrImageURL(photo, 'q');
+                //     // return arr
+                //     // arr[`{${index}}`]=getFlickrImageURL(photo, 'q');
+                //     // return (
+                //     //     <div>
+                //     //         <h1>hello kumara</h1>
+                //     //         <img src={a} alt="a"/>
+                //     //     </div>
+                //     // )
+                // })}}`)
+                
+            // })}
+        
+            // let promiseArr=axiosflickr()
+            // console.log(Math.round((Math.random()*(1000000000000))))
+            // let eeearr=[1,2,3,4,5,6,7,8,9,10]
+            console.log(imageUrl)
+
+            {/* <button onClick={setCount(count+1)}>Want to more images{count}</button> */}
+
+}
