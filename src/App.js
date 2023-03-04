@@ -28,7 +28,7 @@ function App(){
       <h1>Snap Shot</h1>
      <form>
      <label htmlFor="search"></label>
-     <img src={searchpic} alt="searchbar" width="15" height="15" style={{"margin-left":"10px","marginRight":"10px"}}></img>
+     <img src={searchpic} alt="searchbar" width="15" height="15" style={{"marginLeft":"10px","marginRight":"10px"}}></img>
      <input id="search" type="search" value={Keyword} onChange={(e)=>{setKeyword(e.target.value)}}
      placeholder="Search"></input>
      <Link to="/flickr"><button onClick={handleMountain}>Mountain</button></Link>

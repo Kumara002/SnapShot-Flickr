@@ -1,6 +1,6 @@
 import React from "react";
 import {useEffect,useState} from "react";
-
+// import axios from "axios"
 import { useContext} from "react";
 import {UserContext} from "./CreateContext"
 
@@ -29,6 +29,7 @@ function Flickr(){
 
     useEffect(()=>{
         axiosflickr()
+     
     },[user])
     const getFlickrImageURL = (photo, size) => {
         let url = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}`;
@@ -50,14 +51,20 @@ function Flickr(){
                     // get an array of image-url
                  
                      await data.photos.photo.map(async(photo,index) => {
-                        return  setImageUrl([getFlickrImageURL(photo, 'q')])
+                        // return setImageUrl([getFlickrImageURL(photo, 'q')])
+                        // return (setImageUrl([...imageUrl,{url:getFlickrImageURL(photo, 'q')}]))
+                    
+                        return  (setImageUrl([getFlickrImageURL(photo, 'q')]))
                     })
                 })
                 }
+                imageUrl.map((url,key)=>{
+                    console.log(key,url)
+                })
 
     return(
         <div>
-            <h1>Hello bro</h1>
+            <h1>{user} pictures</h1>
             <ul>
             {imageUrl.map((url,key)=>{
                 return(
