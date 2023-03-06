@@ -1,0 +1,9 @@
+.article:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+img{
+    display: inline-block;
+    float: left;
+    margin: 10px;
+}

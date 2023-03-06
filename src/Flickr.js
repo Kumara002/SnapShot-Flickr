@@ -1,8 +1,9 @@
 import React from "react";
 import {useEffect,useState} from "react";
-// import axios from "axios"
+import axios from "axios"
 import { useContext} from "react";
 import {UserContext} from "./CreateContext"
+import "./Flickr.css"
 
 function Flickr(){
     const user=useContext(UserContext)
@@ -43,35 +44,40 @@ function Flickr(){
 
     const axiosflickr=async()=>{
         
-            await fetch(url)
-                .then((res) => {
-                    return res.json()
-                })
-                .then(async(data) => {
+            await axios.get(url).then((data) => {
                     // get an array of image-url
-                 
-                     await data.photos.photo.map(async(photo,index) => {
+                      console.log(data)
+                      const arr= data.data.photos.photo.map((photo,index) => {
                         // return setImageUrl([getFlickrImageURL(photo, 'q')])
                         // return (setImageUrl([...imageUrl,{url:getFlickrImageURL(photo, 'q')}]))
                     
-                        return  (setImageUrl([getFlickrImageURL(photo, 'q')]))
+                        return  (getFlickrImageURL(photo, 'q'))
                     })
+                    setImageUrl(arr)
+                })
+                .catch(()=>{
+
+                }).finally(()=>{
+
                 })
                 }
                 imageUrl.map((url,key)=>{
-                    console.log(key,url)
+                 
+                   return console.log(url)
                 })
 
     return(
         <div>
             <h1>{user} pictures</h1>
-            <ul>
+            <section>
             {imageUrl.map((url,key)=>{
                 return(
-                    <li key={key}><img src={url} alt="flickr" width="500" height="500"/></li>
+                    <article className="article">
+                        <img src={url} key={key}  alt="flickr" width="250" height="250"/>
+                    </article>
                 )
             })}
-            </ul>
+            </section>
         </div>
     )
 }
